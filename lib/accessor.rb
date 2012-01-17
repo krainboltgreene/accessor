@@ -100,6 +100,9 @@ module Accessor
               instance_variable_get "@#{name}".to_sym
             end
           }
+        # If for some reason the `type` parameter was a Symbol, but not those listed above
+        # then raise an `ArgumentError`
+        else raise ArgumentError
       end
     end
 end
