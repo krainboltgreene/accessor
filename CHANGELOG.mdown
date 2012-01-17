@@ -1,4 +1,41 @@
 
+1.0.0 / 2012-01-16 
+==================
+
+  * Delgating to attribute for writer and accessor
+  * Delegating for writer and accessor
+  * Raising on no names given, for accessor and writer
+  * Returning self for chaining
+  * Delegating to the class method
+  * Raising if no names given
+  * Going over each name given and creating an attribute
+  * Defining the method for the property and proc
+  * Raising if it doesnt match reader, writer, or accessor
+  * Returning the ivar value if no arg given
+  * Determining how to treat arg given
+  * Writing accessor proc generator
+  * Writing writer proc generator
+  * Writing logic on proc generation
+  * Checking if types are correct
+  * Dropping scaffold comment
+  * Extending the Object class with Accessor
+  * Defining the core attributes method and documentation
+  * Defining the instance accessor method and documentation
+  * Defining the accessor metamethod and documentation
+  * Defining the instance writer method and docs
+  * Defining the writer metamethod and docs
+  * Defining the instance reader method and docs
+  * Defining the reader metamethod and documentation
+  * Adding documentation on the possible API
+  * Creating a test for features in Accessor
+  * Comparing attr to Accessor via benchmark
+  * Adding a simple example of the API
+  * Adding in a Guardfile for continous testing
+  * Adding a dummy class for my tests
+  * Adding pride to my tests
+  * Fixing rocco problem with redcarpet version
+  * Adding the initial changelog
+
 0.0.1 / 2012-01-16 
 ==================
 
