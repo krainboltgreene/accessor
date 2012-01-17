@@ -60,6 +60,7 @@ module Accessor
   # for the class of an instance object.
   def writer!(*names)
     raise ArgumentError unless names.any?
+    self.class.writer(*names)
     self
   end
 
@@ -75,6 +76,7 @@ module Accessor
   # for the class of an instance object.
   def accessor!(*names)
     raise ArgumentError unless names.any?
+    self.class.accessor(*names)
     self
   end
 
