@@ -64,4 +64,10 @@ module Accessor
   # `Symbol` as an argument, creating both a getter and setter method.
   def accessor(*names)
   end
+
+  # The `accessor!` method is a metamethod, and it takes the same arguments as `accessor`.
+  # The difference between the two are that `accessor!` is used to define setter/getter methods
+  # for the class of an instance object.
+  def accessor!(*names)
+  end
 end
