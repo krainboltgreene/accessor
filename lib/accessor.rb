@@ -77,3 +77,10 @@ module Accessor
     def attribute(name, type = :accessor)
     end
 end
+
+# Extend the main object with the `Accessor` module to populate it with the correct
+# method singleton methods.
+class Object
+  extend Accessor
+  include Accessor
+end
