@@ -51,4 +51,10 @@ module Accessor
   # `Symbol` as an argument, creating a setter method.
   def writer(*names)
   end
+
+  # The `writer!` method is a metamethod, and it takes the same arguments as `writer`.
+  # The difference between the two are that `writer!` is used to define setter methods
+  # for the class of an instance object.
+  def writer!(*names)
+  end
 end
