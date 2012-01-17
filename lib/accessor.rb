@@ -104,6 +104,10 @@ module Accessor
         # then raise an `ArgumentError`
         else raise ArgumentError
       end
+
+      # Finally define an instance method on the class with the `name` parameter and
+      # `Proc` created.
+      define_method name, block
     end
 end
 
