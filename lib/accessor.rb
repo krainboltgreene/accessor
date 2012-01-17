@@ -43,6 +43,7 @@ module Accessor
   # The difference between the two are that `reader!` is used to define getter methods
   # for the class of an instance object.
   def reader!(*names)
+    raise ArgumentError unless names.any?
   end
 
 
