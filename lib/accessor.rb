@@ -77,6 +77,12 @@ module Accessor
       # If the `name` or `type` parameters are anything but `Symbol` classes
       # then it should raise a TypeError.
       raise TypeError unless name.is_a?(Symbol) && type.is_a?(Symbol)
+
+      # Based on the `Symbol` passed in as `type` determine what kind of `Proc` to create.
+      block = case type
+
+        # For getter metamethods, pass along a block that accesses the instance variable
+        when :reader then -> { instance_variable_get "@#{name}".to_sym }
     end
 end
 
