@@ -70,4 +70,10 @@ module Accessor
   # for the class of an instance object.
   def accessor!(*names)
   end
+
+  private
+    # The `attribute` method is the metamethod behind `accessor`, `writer`, and `reader`.
+    # It takes two `Symbols`, but has a default for the last.
+    def attribute(name, type = :accessor)
+    end
 end
