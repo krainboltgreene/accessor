@@ -1,5 +1,3 @@
-require "minitest/pride"
-require 'minitest/autorun'
 require 'accessor'
 
 class Person
@@ -12,3 +10,11 @@ class Person
   end
 
 end
+
+contact = Person.new
+contact.name "Kurtis Rainbolt-Greene"
+contact.email "me+accessor@kurtisrainboltgreene.name"
+contact.email
+
+contact.accessor!(:age).age 24
+p contact
