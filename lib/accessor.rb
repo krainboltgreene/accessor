@@ -44,6 +44,7 @@ module Accessor
   # for the class of an instance object.
   def reader!(*names)
     raise ArgumentError unless names.any?
+    self.class.reader(*names)
   end
 
 
