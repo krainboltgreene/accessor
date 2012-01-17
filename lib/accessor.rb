@@ -93,6 +93,10 @@ module Accessor
         # reader based on if an argument was passed or not (default not).
         when :accessor
           ->(arg = nil) {
+            if arg
+              instance_variable_set "@#{name}".to_sym, arg
+              self
+            end
           }
       end
     end
