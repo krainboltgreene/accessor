@@ -74,6 +74,9 @@ module Accessor
     # The `attribute` method is the metamethod behind `accessor`, `writer`, and `reader`.
     # It takes two `Symbols`, but has a default for the last.
     def attribute(name, type = :accessor)
+      # If the `name` or `type` parameters are anything but `Symbol` classes
+      # then it should raise a TypeError.
+      raise TypeError unless name.is_a?(Symbol) && type.is_a?(Symbol)
     end
 end
 
