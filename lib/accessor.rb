@@ -45,6 +45,7 @@ module Accessor
   def reader!(*names)
     raise ArgumentError unless names.any?
     self.class.reader(*names)
+    self
   end
 
 
@@ -58,6 +59,7 @@ module Accessor
   # The difference between the two are that `writer!` is used to define setter methods
   # for the class of an instance object.
   def writer!(*names)
+    self
   end
 
 
@@ -71,6 +73,7 @@ module Accessor
   # The difference between the two are that `accessor!` is used to define setter/getter methods
   # for the class of an instance object.
   def accessor!(*names)
+    self
   end
 
   private
