@@ -44,4 +44,11 @@ module Accessor
   # for the class of an instance object.
   def reader!(*names)
   end
+
+
+  # The `writer` method is a metamethod, and it takes an `Array` of `Symbols`.
+  # It goes over each `Symbol` and calls the `attribute` method with the 
+  # `Symbol` as an argument, creating a setter method.
+  def writer(*names)
+  end
 end
