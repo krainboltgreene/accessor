@@ -36,6 +36,7 @@ module Accessor
   # It goes over each `Symbol` and calls the `attribute` method with the 
   # `Symbol` as an argument, creating a getter method.
   def reader(*names)
+    names.each { |name| attribute name, :reader }
   end
 
   # The `reader!` method is a metamethod, and it takes the same arguments as `reader`.
