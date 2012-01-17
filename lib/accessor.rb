@@ -38,4 +38,10 @@ module Accessor
   # `Symbol` as an argument, creating a getter method.
   def reader(*names)
   end
+
+  # The `reader!` method is a metamethod, and it takes the same arguments as `reader`.
+  # The difference between the two are that `reader!` is used to define getter methods
+  # for the class of an instance object.
+  def reader!(*names)
+  end
 end
