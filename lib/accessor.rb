@@ -88,6 +88,13 @@ module Accessor
         # sets the instance variable to that value, finally returning `self`. The `self` 
         # return allows for cool chaining like `person.age(24).name("Katie")`
         when :writer then ->(arg) { instance_variable_set "@#{name}".to_sym, arg; self }
+
+        # Finally for both functionalities the accessor metamethod does both the setter and
+        # reader based on if an argument was passed or not (default not).
+        when :accessor
+          ->(arg = nil) {
+          }
+      end
     end
 end
 
