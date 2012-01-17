@@ -33,4 +33,9 @@ require "accessor/version"
 #
 module Accessor
   # Your code goes here...
+  # The `reader` method is a metamethod, and it takes an `Array` of `Symbols`.
+  # It goes over each `Symbol` and calls the `attribute` method with the 
+  # `Symbol` as an argument, creating a getter method.
+  def reader(*names)
+  end
 end
