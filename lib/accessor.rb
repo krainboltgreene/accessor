@@ -53,6 +53,7 @@ module Accessor
   # It goes over each `Symbol` and calls the `attribute` method with the 
   # `Symbol` as an argument, creating a setter method.
   def writer(*names)
+    names.each { |name| attribute name, :writer }
   end
 
   # The `writer!` method is a metamethod, and it takes the same arguments as `writer`.
@@ -69,6 +70,7 @@ module Accessor
   # It goes over each `Symbol` and calls the `attribute` method with the 
   # `Symbol` as an argument, creating both a getter and setter method.
   def accessor(*names)
+    names.each { |name| attribute name }
   end
 
   # The `accessor!` method is a metamethod, and it takes the same arguments as `accessor`.
