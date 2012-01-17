@@ -57,7 +57,7 @@ Or add it to your `Gemfile`:
 ``` ruby
 source :rubygems
 
-gem "accessor", "1.1.0"
+gem "accessor", "1.0.2"
 ```
 
 That's all you have to do.
