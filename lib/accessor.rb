@@ -83,6 +83,11 @@ module Accessor
 
         # For getter metamethods, pass along a block that accesses the instance variable
         when :reader then -> { instance_variable_get "@#{name}".to_sym }
+
+        # For setter metamethods, pass along a block that takes a single argument and 
+        # sets the instance variable to that value, finally returning `self`. The `self` 
+        # return allows for cool chaining like `person.age(24).name("Katie")`
+        when :writer then ->(arg) { instance_variable_set "@#{name}".to_sym, arg; self }
     end
 end
 
