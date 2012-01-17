@@ -57,4 +57,11 @@ module Accessor
   # for the class of an instance object.
   def writer!(*names)
   end
+
+
+  # The `accessor` method is a metamethod, and it takes an `Array` of `Symbols`.
+  # It goes over each `Symbol` and calls the `attribute` method with the 
+  # `Symbol` as an argument, creating both a getter and setter method.
+  def accessor(*names)
+  end
 end
